@@ -88,7 +88,12 @@ while(validar){
             };
 
             if (validar){
-                validar = confirm("Empacar otro articulo.");
+
+                validar=confirm("tienes espacio en la maleta")
+                if(validar){
+                    validar = confirm("Empacar otro articulo.");
+                }
+                
             }else{
                 alert("El esta en su maximo")
             };
@@ -147,7 +152,10 @@ while(validar){
                 }
             };
             if (validar==false){
-                validar = confirm("Empacar otro articulo.");
+                validar=confirm("tienes espacio en la maleta")
+                if(validar){
+                    validar = confirm("Empacar otro articulo.");
+                }
             }else{
                 alert("El esta en su maximo")
             };
