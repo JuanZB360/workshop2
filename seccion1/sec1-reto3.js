@@ -85,13 +85,15 @@ alert("el dinero disponible que tienes es de "+plataExtra);
 let validar;
 
 const menor = lisSouver.reduce((acumulador , elemt , indice,array) => {
-  if (elemt.costo < acumulador){
-    acumulador=elemt.costo;
+  if (elemt.costo < acumulador.costo){
+    acumulador.costo=elemt.costo;
+    acumulador.nombre=elemt.nombre;
   }
   return acumulador;
-}, {})
+}, {nombre:null, costo: 5000000000})
 
-console.log("el menor precio es " + menor)
+console.log("el producto con menor costo es: "+ menor)
+alert("el producto con menor costo es: "+ menor)
 
 if(plataExtra > 20000){
   validar = confirm('deseas valiardar una compra: ');
